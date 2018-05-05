@@ -6,7 +6,6 @@ header, nav, main, section, footer {display:block;}
     width: 1000px;
     height: 1000px;
     margin: 0 auto;
-    background-color: black;
 }
 
 .clear {
@@ -35,6 +34,28 @@ nav {
 
 }
 
+ul {
+    list-style: none;
+}
+
+li {
+    float: left;
+    line-height: 57px;
+    text-align: center;
+    width: 242px;
+    height: 57px;
+}
+
+ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Arial";
+}
+
+.selected {
+    background-color: #333333;
+}
+
 aside {
     float:left;
     width: 121px;
@@ -45,12 +66,42 @@ aside {
 section {
     width: 849px;
     height: 268px;
+    margin-left: 30px;
     background-color: #ee5f5b;
+    float: left;
+    position: relative;
+}
+
+article {
+    position: absolute;
+    opacity: 0.6;
+    background-color: black;
+}
+
+main {
+    width: 879px;
+    height: 428px;
+    position: relative;
     float: right;
+}
+
+#box1 {
+    width: 128px;
+    height: 96px;
+    left: 342px;
+    top: 89px;
+}
+
+#box2 {
+    width: 693px;
+    height: 176px;
+    left: 97px;
+    top: 224px;
 }
 
 footer {
     position: fixed;
+    bottom: 0px;
     width: 1000px;
     height: 121px;
     background-color: #d6d6d6;
