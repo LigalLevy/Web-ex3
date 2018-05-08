@@ -1,49 +1,25 @@
 * {margin:0; padding:0;}
 
-header, nav, main, section, footer {display:block;}
+header, nav, main, section, article ,footer {display:block;}
 
-#wrapper {
+.wrapper {
     width: 1000px;
     height: 1000px;
     margin: 0 auto;
 }
 
-.clear {
-    clear: both;
+article {
+    opacity: 0.6;
+    background-color: black;
 }
 
-header {
+footer {
     width: 1000px;
-    height: 183px;
-}
-
-#logo {
-    width: 78px;
-    height: 79px;
-    display: block;
-    background-image: url(../images/logo.jpg);
-    margin-left: 104px;
-}
-
-nav {
-    width: 727px;
-    height: 57px;
-    background-color: #b94a48;
-    float: right;
-    margin-top:47px;
-
+    background-color: #d6d6d6;
 }
 
 ul {
     list-style: none;
-}
-
-li {
-    float: left;
-    line-height: 57px;
-    text-align: center;
-    width: 242px;
-    height: 57px;
 }
 
 ul li a {
@@ -52,18 +28,53 @@ ul li a {
     font-family: "Arial";
 }
 
-.selected {
+.clear {
+    clear: both;
+}
+
+/** LAYOUT 1 **/
+#layout1 header {
+    width: 1000px;
+    height: 183px;
+}
+
+#layout1 .logo {
+    width: 78px;
+    height: 79px;
+    display: block;
+    background-image: url(../images/logo.jpg);
+    margin-left: 104px;
+}
+
+#layout1 nav {
+    width: 727px;
+    height: 57px;
+    background-color: #b94a48;
+    float: right;
+    margin-top:47px;
+
+}
+
+#layout1 li {
+    float: left;
+    line-height: 57px;
+    text-align: center;
+    width: 242px;
+    height: 57px;
+}
+
+#layout1 .selected {
     background-color: #333333;
 }
 
-aside {
+#layout1 aside {
     float:left;
     width: 121px;
     height: 696px;
     background-color: #f2dede;
 }
 
-section {
+#layout1 section {
     width: 849px;
     height: 268px;
     margin-left: 30px;
@@ -72,37 +83,110 @@ section {
     position: relative;
 }
 
-article {
-    position: absolute;
-    opacity: 0.6;
-    background-color: black;
-}
-
-main {
+#layout1 main {
     width: 879px;
     height: 428px;
     position: relative;
     float: right;
 }
 
-#box1 {
+#layout1 > section > article {
     width: 128px;
     height: 96px;
     left: 342px;
     top: 89px;
+    position: absolute;
 }
 
-#box2 {
+#layout1 > main > article {
     width: 693px;
     height: 176px;
     left: 97px;
     top: 224px;
+    position: absolute;
 }
 
-footer {
+#layout1 footer {
+    height: 121px;
+}
+
+
+/**** LAYOUT 2 ****/
+
+#layout2 header {
+    width: 100%;
+    height: 193px;
+}
+
+#layout2 .logo {
+    width: 78px;
+    height: 79px;
+    display: block;
+    background: url(../images/logo.jpg) no-repeat bottom;
+    margin: auto;
+    padding-top: 30px;
+}
+
+#layout2 nav {
+    width: 243px;
+    height: 886px;
+    float: left;
+    background-color: #333333;
+}
+
+#layout2 li {
+    line-height: 57px;
+    text-align: center;
+    height: 57px;
+    width: 243px;
+}
+
+#layout2 .selected {
+    background-color: #b94a48;
+}
+
+#layout2 main {
+    width: 757px;
+    height: 886px;
+    background-color: #ee5f5b;
+    position: relative;
+    float: left;
+}
+
+#layout2 article {
+    width: 212px;
+    margin-left: 30px;
+    float: left;
+
+}
+
+#layout2 main article:first-child {
+    height: 366px;
+}
+
+#layout2 main article:nth-child(2) {
+    height: 560px;
+}
+
+#layout2 main article:nth-child(3) {
+    height: 223px;
+}
+
+#layout2 main article:nth-child(4) {
+    height: 500px;
+    top: 386px;
+    position: absolute;
+}
+
+#layout2 main article:nth-child(5) {
+    height: 306px;
+    top: 580px;
+    left: 242px;
+    position: absolute;
+}
+
+#layout2 footer {
+    height: 50px;
     position: fixed;
     bottom: 0px;
-    width: 1000px;
-    height: 121px;
-    background-color: #d6d6d6;
 }
