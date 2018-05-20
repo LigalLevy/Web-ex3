@@ -8,7 +8,7 @@
 header, nav, main, section, article ,footer {display:block;}
 
 .wrapper {
-    width: 1000px;
+    max-width: 1000px;
     height: 1000px;
     margin: 0 auto;
 }
@@ -215,7 +215,7 @@ ul li a {
 }
 
 #layout3 nav {
-    width: 100%;
+    width: 500px;
     height: 62px;
     float: left;
     background-color: #b94a48;
@@ -243,19 +243,22 @@ ul li a {
 }
 #layout3 section {
     width: 500px;
-    height: 500px;
     background-color: #9d261d;
-    float: right;
+    float: left;
 }
 
 #layout3 .box {
     width: 250px;
     height: 250px;
     background-color: black;
-    float: right;
+    float: left;
 }
 
+#layout3 .box:hover {
+    background-color: white;
+    opacity: 1;
 
+}
 #layout3 section article:first-child {
     opacity: 0.4;
 }
@@ -273,8 +276,9 @@ ul li a {
 }
 
 #layout3 main {
-    width: 100%;
+    width: 1000px;
     min-height: 500px;
+    float: left;
     background-color: #9d261d;
 }
 /*
