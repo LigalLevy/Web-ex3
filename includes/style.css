@@ -241,7 +241,8 @@ ul li a {
     margin: 128px auto;
     background: url(../images/plus.jpg);
 }
-#layout3 section {
+
+#layout3 .boxSection {
     width: 500px;
     background-color: #9d261d;
     float: left;
@@ -257,8 +258,8 @@ ul li a {
 #layout3 .box:hover {
     background-color: white;
     opacity: 1;
-
 }
+
 #layout3 section article:first-child {
     opacity: 0.4;
 }
@@ -276,24 +277,9 @@ ul li a {
 }
 
 #layout3 main {
+    max-width: 100%;
     width: 1000px;
     min-height: 500px;
     float: left;
     background-color: #9d261d;
 }
-/*
-/*for desktop
-@media screen and (min-width: 851px) {
-
-}
-
-/*for tablet
-@media screen and (max-width: 850px) and (min-width: 591px){
-
-}
-
-/*for mobile*
-@media screen and (max-width: 590px) {
-
-}
-*/
