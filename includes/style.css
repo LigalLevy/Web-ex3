@@ -242,7 +242,7 @@ ul li a {
     background: url(../images/plus.jpg);
 }
 
-#layout3 .boxSection {
+#layout3 #boxSection {
     width: 500px;
     background-color: #9d261d;
     float: left;
@@ -278,6 +278,7 @@ ul li a {
 
 #layout3 main {
     max-width: 100%;
+    min-width: 500px;
     width: 1000px;
     min-height: 500px;
     float: left;

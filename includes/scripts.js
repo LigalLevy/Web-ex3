@@ -20,28 +20,30 @@ function getRandomOpacity() {
 function Box() {
     var boxObj = document.createElement('article');
     boxObj.className = "box";
-    boxObj.style.opacity = getRandomOpacity();
+
+    var firstOpacity = getRandomOpacity();
+    boxObj.style.opacity = firstOpacity;
+
     boxObj.onmouseover = function(){
         boxObj.style.opacity = "1";
     };
+
+    boxObj.onmouseout = function(){
+        boxObj.style.opacity = firstOpacity;
+    };
+
     return boxObj;
 }
 
 function BoxManager() {
-    var iBoxNum = 4;
-    var sectionObj = null;
 
-    for(var i=0; i<iBoxNum; i++) {
-        if(sectionObj === null) {
-            sectionObj = document.createElement('section');
-            sectionObj.className = "boxSection";
-        }
-
-        var boxObj = new Box();
-        sectionObj.appendChild(boxObj);
-        console.log("box "+i+" was created");
-    }
+    var boxObj = new Box();
 
     var mainObj = document.getElementsByTagName('main');    // show parent
-    mainObj[0].appendChild(sectionObj);                     // put the section with the 4 boxes inside the main object
-}
+    mainObj[0].appendChild(boxObj);                     // put the box inside the main object
+
+    //sectionObj.appendChild(boxObj);
+
+
+
+    }
